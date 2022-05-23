@@ -1,3 +1,7 @@
+
+#Test JS EC
+Fork this repo and show us your development progress via a Pull Request
+
 #Filter
 
 Write a function that removes all items that are not numbers from the array. The function should modify the existing array, not create a new one.
