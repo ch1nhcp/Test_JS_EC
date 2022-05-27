@@ -97,7 +97,15 @@ console.log(findAllHobbyists("Yoga", hobbies));
 
 ```javascript
 function findAllHobbyists(hobby, hobbies) {
-  return [];
+  const nameArray = [];
+  const hobbiesArray = Object.entries(hobbies);
+
+  hobbiesArray.forEach((obj) => {
+    if (obj[1].includes(hobby)) {
+      nameArray.push(obj[0]);
+    }
+  });
+  return nameArray;
 }
 
 var hobbies = {
