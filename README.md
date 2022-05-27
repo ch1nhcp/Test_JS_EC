@@ -124,11 +124,11 @@ Modify the implementation of the _Snapshot_ class so that an array stored in the
 ```javascript
 class Snapshot {
   constructor(array) {
-    this.array = array;
+    this.array = [...array];
   }
 
   restore() {
-    return this.array;
+    return [...this.array]
   }
 }
 
