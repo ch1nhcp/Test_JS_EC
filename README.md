@@ -10,7 +10,7 @@ For example, if the input array contains values [1, &#39;a&#39;, &#39;b&#39;, 2]
 ```javascript
 function filterNumbersFromArray(arr) {
   // Write the code that goes here
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] == "string") {
       arr.splice(i, 1);
       i--;
@@ -68,6 +68,12 @@ For example, for the array of 3D vectors [[1, 1, 1], [2, 2, 2], [3, 3, 3] ] _fin
 ```javascript
 function findShortest(vectors) {
   // Write the code that goes here
+  let vectorsArr = vectors.map((e) =>
+  // Math.sqrt(e[0] ** 2 + e[1] ** 2 + e[2] ** 2)
+    e.reduce((a, b) => a ** 2 + b ** 2, 0)
+  );
+  let index = vectorsArr.indexOf(Math.min(...vectorsArr));
+  return vectors[index];
 }
 
 var vectors = [
@@ -128,7 +134,7 @@ class Snapshot {
   }
 
   restore() {
-    return [...this.array]
+    return [...this.array];
   }
 }
 
